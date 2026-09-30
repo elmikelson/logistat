@@ -35,7 +35,7 @@ warnings.filterwarnings('ignore', category=FutureWarning)
 warnings.filterwarnings('ignore', category=DeprecationWarning)
 warnings.filterwarnings('ignore', message='.*ill-conditioned.*')
 
-APP_NAME = "PostRun"
+APP_NAME = "logiStat"
 APP_VERSION = "1.0"
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -56,7 +56,7 @@ st.caption(f"v{APP_VERSION} · Explore, fit, and validate models with full diagn
 # ──────────────────────────────────────────────────────────────────────────────
 st.sidebar.header("📁 Data Upload")
 uploaded_file = st.sidebar.file_uploader("Choose a CSV or Excel file", type=["csv", "xlsx", "xls"])
-st.sidebar.caption("🔒 Files are processed on this app's host, not stored by PostRun. "
+st.sidebar.caption("🔒 Files are processed on this app's host, not stored by logiStat. "
                    "Don't upload sensitive or proprietary data.")
 
 st.sidebar.header("📊 Exploratory Plots")
@@ -136,9 +136,9 @@ if st.session_state.get("data_source") and uploaded_file is None:
     if st.sidebar.button("Clear sample data"):
         st.session_state.data_source = None
 
-with st.sidebar.expander("ℹ️ About PostRun"):
+with st.sidebar.expander("ℹ️ About logiStat"):
     st.markdown(
-        f"**PostRun v{APP_VERSION}**: point-and-click statistical analysis for simulation output.\n\n"
+        f"**logiStat v{APP_VERSION}**: point-and-click statistical analysis for simulation output.\n\n"
         "**Workflow:** load data → clean (missing values, outliers) → explore (plots) → "
         "pick a target and features → fit a model → read the diagnostics.\n\n"
         "**Categoricals** are reference-coded: a column with *k* levels becomes *k − 1* "
@@ -147,7 +147,7 @@ with st.sidebar.expander("ℹ️ About PostRun"):
         "and only where the math is valid (OLS). Judge predictive performance by the "
         "holdout metrics and cross-validation.\n\n"
         "**Privacy:** uploads are processed on the host's servers. For sensitive data, run "
-        "PostRun locally (`streamlit run streamlit_app.py`)."
+        "logiStat locally (`streamlit run streamlit_app.py`)."
     )
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -1266,7 +1266,7 @@ def run_model_validation_tests(model, X, y, y_pred, is_classifier):
 def show_quick_start():
     """Landing content, shown only until data is loaded."""
     st.markdown(
-        "PostRun takes you from raw simulation output to diagnosed statistical models, "
+        "logiStat takes you from raw simulation output to diagnosed statistical models, "
         "with no code. Expect **one row per run or replication**: the parameters you varied "
         "as columns, and the outcomes you measured as columns."
     )
@@ -1284,7 +1284,7 @@ def show_quick_start():
             "*Linear Regression*. Then switch the target to `met_target` and choose "
             "*Logistic Regression* (remove `fill_rate` from the features first).")
     st.caption("🔒 Uploaded files are processed on this app's host. Don't upload sensitive or "
-               "proprietary data; run PostRun locally for that.")
+               "proprietary data; run logiStat locally for that.")
 
 
 @st.cache_data

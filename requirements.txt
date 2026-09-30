@@ -1,4 +1,4 @@
-# PostRun — Python dependencies
+# logiStat — Python dependencies
 # Requires Python >= 3.10 (uses `str | None` / `tuple[...]` runtime annotations)
 
 streamlit>=1.51,<2.0   # 1.51+ needed for width="stretch" on charts

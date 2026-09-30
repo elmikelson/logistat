@@ -1,8 +1,10 @@
-# PostRun
+# logiStat
 
 **Point-and-click statistical analysis for simulation output.**
 
-Upload a CSV or Excel file of simulation results (one row per run or replication) and PostRun takes you from raw output to diagnosed models without writing code: exploratory plots, preprocessing, nine regression and classification models, and the full diagnostic suite.
+![logiStat with the example supply-network dataset loaded](docs/screenshot.png)
+
+Upload a CSV or Excel file of simulation results (one row per run or replication) and logiStat takes you from raw output to diagnosed models without writing code: exploratory plots, preprocessing, nine regression and classification models, and the full diagnostic suite.
 
 ## Features
 
@@ -16,11 +18,11 @@ Upload a CSV or Excel file of simulation results (one row per run or replication
 
 ## Try it
 
-Use the hosted app, or run it locally:
+Run it locally:
 
 ```bash
-git clone https://github.com/<your-username>/postrun.git
-cd postrun
+git clone https://github.com/elmikelson/logiStat.git
+cd logiStat
 python -m venv venv
 # Windows: venv\Scripts\activate    macOS/Linux: source venv/bin/activate
 pip install -r requirements.txt
@@ -52,8 +54,8 @@ Each categorical feature is reference-coded: a column with *k* levels becomes *k
 
 ## Data privacy
 
-On the hosted version, uploaded files are processed on the hosting provider's servers. **Don't upload sensitive or proprietary data.** Run it locally for that.
+If you deploy logiStat to a hosting service, uploaded files are processed on that provider's servers. **Don't upload sensitive or proprietary data.** Run it locally for that.
 
 ## License
 
-TBD
+[MIT](LICENSE)
