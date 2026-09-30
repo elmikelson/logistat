@@ -2,7 +2,7 @@
 
 **Point-and-click statistical analysis for simulation output.**
 
-![logiStat with the example supply-network dataset loaded](docs/screenshot.png)
+![logiStat with the example supply-network dataset loaded](screenshot.png)
 
 Upload a CSV or Excel file of simulation results (one row per run or replication) and logiStat takes you from raw output to diagnosed models without writing code: exploratory plots, preprocessing, nine regression and classification models, and the full diagnostic suite.
 
